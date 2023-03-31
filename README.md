@@ -2,7 +2,7 @@
 # Angkutin App
 
 
-Selamat datang di Angkutin App! Ini adalah aplikasi ride-hailing sederhana yang dibangun menggunakan React, TypeScript, Redux Toolkit, Material UI, dan Bing Maps API.
+Selamat datang di Angkutin App! Ini adalah aplikasi ride-hailing sederhana yang dibangun menggunakan React, TypeScript, Redux Toolkit, Material UI, dan MapBox API.
 
 
 
