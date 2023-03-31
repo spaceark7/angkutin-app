@@ -22,6 +22,7 @@ import React, { useEffect } from 'react'
 import { TabPanel } from '@presentation/components/HomePage/TabPanel'
 import { GetUserLocation } from '@/presentation/hooks/GetUserLocation'
 import ErrorAlert from '../common/ErrorAlert'
+import SearchBox from '../common/SearchBox'
 
 const TabsMenu = () => {
   const [value, setValue] = React.useState(0)
@@ -72,35 +73,7 @@ const TabsMenu = () => {
       </Box>
       <TabPanel value={value} index={0}>
         <Box className='flex flex-col gap-y-4'>
-          <FormControl component='div' variant='filled'>
-            <InputLabel htmlFor='filled-adornment-location'>
-              Where to?
-            </InputLabel>
-            <FilledInput
-              id='filled-adornment-location'
-              endAdornment={
-                <InputAdornment component='div' position='end'>
-                  <IconButton
-                    onClick={handleLocation}
-                    aria-label='get user location'
-                    edge='end'
-                  >
-                    <GpsFixed />
-                  </IconButton>
-                </InputAdornment>
-              }
-              aria-describedby='location-helper-text'
-              inputProps={{
-                'aria-label': 'location',
-              }}
-              className='w-full'
-              value={toAddress}
-              onChange={(e) => setToAddress(e.target.value)}
-            />
-            <FormHelperText id='filled-weight-helper-text'>
-              Allow us to access location
-            </FormHelperText>
-          </FormControl>
+          <SearchBox />
         </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>
